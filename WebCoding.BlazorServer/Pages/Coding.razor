@@ -1,0 +1,31 @@
+@using WebCoding.BlazorServer.Data
+@using WebCoding.BlazorServer.Model
+@using System.ComponentModel.DataAnnotations
+<h3>Coding</h3>
+<EditForm Model="_CodingDataModel" OnValidSubmit="Debugging">
+    <DataAnnotationsValidator/>
+    <InputTextArea @bind-Value="_CodingDataModel._code">
+        <ValidationMessage For="()=>_CodingDataModel._code"/>
+    </InputTextArea>
+    <InputSelect @bind-Value="_CodingDataModel._lang">
+        <ValidationMessage For="()=>_CodingDataModel._lang"/>
+        <option>cs</option>
+        <option>java</option>
+        <option>cpp</option>
+        <option>c</option>
+        <option>py</option>
+        <option>py2</option>
+    </InputSelect>
+    <div class="form-group">
+            <button class="btn btn-primary" type="submit">Run</button>
+        </div>
+</EditForm>
+<h1></h1>
+@code {
+    public CodingDataModel _CodingDataModel;
+    public string OutputCode;
+    public void Debugging()
+    {
+        OutputCode = _CodingDataModel.RUN();
+    }
+}
