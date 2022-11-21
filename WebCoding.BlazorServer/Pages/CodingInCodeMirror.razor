@@ -3,12 +3,12 @@
 
 
 <h3>CodingInCodeMirror</h3>
-<textarea id="codearea"></textarea>
+<textarea id="codearea" , @bind="Code"></textarea>
 
 
 @code {
     //public string UserCodeInput { get; set; }
-
+    public string Code { get; set; }
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
