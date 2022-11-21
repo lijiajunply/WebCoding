@@ -46,9 +46,8 @@
     
     public CodingDataModel _CodingDataModel { get; set; } = new CodingDataModel();
 
-    public string OutputCode;
+    public string OutputCode { get; set; } = "";
+    
     public void Debugging()
-    {
-        OutputCode = _CodingDataModel.RUN();
-    }
+        =>OutputCode = _CodingDataModel.RUN();
 }
