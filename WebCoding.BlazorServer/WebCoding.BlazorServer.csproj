@@ -8,7 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="CodeMirror" Version="2.37.0" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="6.0.10" />
         <PackageReference Include="System.ComponentModel.Annotations" Version="6.0.0-preview.4.21253.7" />
     </ItemGroup>

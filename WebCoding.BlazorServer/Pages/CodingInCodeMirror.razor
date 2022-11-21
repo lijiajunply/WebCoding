@@ -1,0 +1,28 @@
+@page 'CodingInCodeMirror'
+@inject IJSRuntime JSRuntime;
+
+
+<h3>CodingInCodeMirror</h3>
+<textarea id="codearea"></textarea>
+
+
+@code {
+    //public string UserCodeInput { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+
+            await JSRuntime.InvokeVoidAsync("loadCodeEditor", DotNetObjectReference.Create(this));
+        }
+    }
+
+    //[JSInvokable("UpdateField")]
+    //public Task UpdateField(string codeValue)
+    //{
+        //UserCodeInput = codeValue;
+        //StateHasChanged();
+        //return Task.CompletedTask;
+    //}
+}

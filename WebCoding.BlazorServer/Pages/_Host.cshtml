@@ -6,3 +6,70 @@
 }
 
 <component type="typeof(App)" render-mode="ServerPrerendered"/>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlazorApp1</title>
+    <base href="~/" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+
+    <script src="~/codemirror/codemirror.js"></script>
+    <link rel="stylesheet" href="~/codemirror/codemirror.css">
+
+    <script src="~/codemirror/mode/clike.js"></script>
+    <script src="~/codemirror/addon/display/fullscreen.js"></script>
+    <link rel="stylesheet" href="~/codemirror/addon/display/fullscreen.css">
+    <link rel="stylesheet" href="/codemirror/theme/cobalt.css">
+    <link rel="stylesheet" href="/codemirror/theme/monokai.css">
+    
+
+</head>
+<body>
+    <app>
+        <component type="typeof(App)" render-mode="ServerPrerendered" />
+    </app>
+
+
+
+    <div id="blazor-error-ui">
+        <environment include="Staging,Production">
+            An error has occurred. This application may no longer respond until reloaded.
+        </environment>
+        <environment include="Development">
+            An unhandled exception has occurred. See browser dev tools for details.
+        </environment>
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.server.js"></script>
+    <script>
+        function loadCodeEditor(dontNetObjRef) {
+                var codemirrorEditor = CodeMirror.fromTextArea(document.getElementById('codearea'), {
+                    lineNumbers: true,
+                    styleActiveLine: true,
+                    matchBrackets: true,
+                    mode: "text/x-csharp",
+                    theme: "monokai",
+                    extraKeys: {
+                        "F11": function (cm) {
+                            cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+                        },
+                        "Esc": function (cm) {
+                            if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+                        }
+                    }
+                });
+            codemirrorEditor.setSize(900, 500);
+            codemirrorEditor.on("change", editor => {
+                dontNetObjRef.invokeMethodAsync("UpdateField", editor.getValue());
+                console.log(editor.getValue());
+            });
+            }
+    </script>
+</body>
+</html>

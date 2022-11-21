@@ -1,6 +1,9 @@
+@page '/coding'
+
 @using WebCoding.BlazorServer.Data
 @using WebCoding.BlazorServer.Model
 @using System.ComponentModel.DataAnnotations
+
 <h3>Coding</h3>
 <EditForm Model="_CodingDataModel" OnValidSubmit="Debugging">
     <DataAnnotationsValidator/>
@@ -23,7 +26,9 @@
 </EditForm>
 <h3>@OutputCode</h3>
 <h1></h1>
+
 @code {
+    
     public CodingDataModel _CodingDataModel { get; set; } = new CodingDataModel();
     public string OutputCode;
     public void Debugging()
