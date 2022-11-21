@@ -19,4 +19,6 @@ a.StandardInput.Close();
 
 Console.WriteLine(a.StandardOutput.ReadToEnd());//输出
 ```
-
+虽然现在还有bug（应该是docker的原因，我在windows上试过了，到/bin/bash这里是没问题的），但是我并不想写下去了，累了，麻木了[doge]
+如果要写下去，就先把上面那个bug改了，还要用一下codemirror,那个东西我包装了一下，在https://gitee.com/luckyfishisdashen/CodeMirror.Blazor上
+使用那个就自己去看一下[doge]
