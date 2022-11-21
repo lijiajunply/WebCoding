@@ -4,7 +4,11 @@ namespace WebCoding.BlazorServer.Data;
 
 public class CodingDataModel
 {
+    [Required(ErrorMessage = "不能为空")]
+    [Display(Name ="Code")]
     public string _code { get; set; }
+    
+    [Display(Name ="Lang")]
     public Lang _lang { get; set; }
 
     public string RUN()

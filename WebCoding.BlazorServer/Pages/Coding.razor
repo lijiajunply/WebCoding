@@ -17,12 +17,14 @@
         <option>py2</option>
     </InputSelect>
     <div class="form-group">
-            <button class="btn btn-primary" type="submit">Run</button>
-        </div>
+        <button class="btn btn-primary" type="submit">Run</button>
+    </div>
+    <ValidationSummary></ValidationSummary>
 </EditForm>
+<h3>@OutputCode</h3>
 <h1></h1>
 @code {
-    public CodingDataModel _CodingDataModel;
+    public CodingDataModel _CodingDataModel { get; set; } = new CodingDataModel();
     public string OutputCode;
     public void Debugging()
     {
