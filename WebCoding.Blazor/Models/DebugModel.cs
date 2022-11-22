@@ -43,7 +43,7 @@ public class DebugModel
 
     public string LangToShell()
     {
-        string shell = "cat>" +"\n" + _codefile +"\n"+ @"<<\EOF " +"\n"+ _code +"\n" + "EOF" +"\n";
+        string shell = "cat>"+ _codefile + @"<<\EOF " +"\n"+ _code +"\n" + "EOF" +"\n";
         switch (_lang)
         {   
             case Lang.c:
