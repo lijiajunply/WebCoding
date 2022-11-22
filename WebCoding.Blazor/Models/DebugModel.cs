@@ -42,7 +42,7 @@ public class DebugModel
 
     public string LangToShell()
     {
-        string shell = "docker run -i ubuntu /bin/bash && cat>" + _codefile + @"<<\EOF " + _code +"&& EOF &&";
+        string shell = "docker exec -i testUbuntu /bin/bash && cat>" + _codefile + @"<<\EOF " + _code +"&& EOF &&";
         switch (_lang)
         {   
             case Lang.c:

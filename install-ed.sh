@@ -1,5 +1,6 @@
 sudo -i
-docker run -ti ubuntu bash
+docker run -d --name=testUbuntu ubuntu tail -f /dev/null
+docker exec -i testUbuntu /bin/bash
 apt update
 apt upgrade
 apt install gcc g++ openjdk-17-jdk python2 python3
