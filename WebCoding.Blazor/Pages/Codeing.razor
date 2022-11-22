@@ -1,0 +1,53 @@
+@page "/CodingDebug"
+
+@using WebCoding.Blazor.Models
+@using System.ComponentModel.DataAnnotations
+
+<h3>Coding</h3>
+<EditForm Model="_CodingDataModel" OnValidSubmit="Debugging">
+    <DataAnnotationsValidator/>
+    <InputTextArea @bind-Value="_CodingDataModel._code">
+        <ValidationMessage For="()=>_CodingDataModel._code"/>
+    </InputTextArea>
+    <InputSelect @bind-Value="_CodingDataModel._lang">
+        <ValidationMessage For="()=>_CodingDataModel._lang"/>
+        <option>cs</option>
+        <option>java</option>
+        <option>cpp</option>
+        <option>c</option>
+        <option>py</option>
+        <option>py2</option>
+    </InputSelect>
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Run</button>
+    </div>
+    <ValidationSummary></ValidationSummary>
+</EditForm>
+<h3>@OutputCode</h3>
+<h1></h1>
+
+@code {
+    
+    public class CodingDataModel
+    {
+        [Required(ErrorMessage = "不能为空")]
+        [Display(Name ="Code")]
+        public string _code { get; set; }
+    
+        [Display(Name ="Lang")]
+        public Lang _lang { get; set; }
+
+        public string RUN()
+        {
+            var a = new DebugModel(_lang, _code);
+            return a.RunCode();
+        }
+    }
+    
+    public CodingDataModel _CodingDataModel { get; set; } = new CodingDataModel();
+    public string OutputCode;
+    public void Debugging()
+    {
+        OutputCode = _CodingDataModel.RUN();
+    }
+}

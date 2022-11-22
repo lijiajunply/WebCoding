@@ -1,4 +1,4 @@
-namespace WebCoding.BlazorServer.Models;
+namespace WebCoding.Blazor.Models;
 
 public enum Lang
 {

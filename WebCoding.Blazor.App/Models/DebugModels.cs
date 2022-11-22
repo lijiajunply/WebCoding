@@ -1,9 +1,16 @@
 using System.Diagnostics;
 
-namespace WebCoding.Blazor.Models;
-/// <summary>
-/// 现在支持的编程语言: C#,C++,C,Java,Python,Python2
-/// </summary>
+namespace WebCoding.Blazor.App.Models;
+
+public enum Lang
+{
+    cs,
+    java,
+    cpp,
+    c,
+    py,
+    py2
+}
 
 public class DebugModel
 {

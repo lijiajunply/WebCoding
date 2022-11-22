@@ -1,6 +1,6 @@
 @page "/Coding"
 
-@using WebCoding.BlazorServer.Models
+@using WebCoding.Blazor.Models
 @using System.ComponentModel.DataAnnotations
 @using AntDesign
 @using Microsoft.AspNetCore.Components
@@ -39,9 +39,7 @@
 <h3>@OutputCode</h3>
 
 @code {
-    
-    
-    
+
     public class CodingDataModel
     {
         [Required(ErrorMessage = "不能为空")]
