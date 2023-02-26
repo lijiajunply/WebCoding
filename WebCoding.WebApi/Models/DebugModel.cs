@@ -41,7 +41,7 @@ public class DebugModel
     public DebugModel(Lang lang,string code)
     {
         proc                                  = new Process();
-        proc.StartInfo.FileName               = "/bin/bash";
+        proc.StartInfo.FileName               = "cmd.exe";
         proc.StartInfo.UseShellExecute        = false; //是否使用操作系统shell启动
         proc.StartInfo.RedirectStandardInput  = true;  //接受来自调用程序的输入信息
         proc.StartInfo.RedirectStandardOutput = true;  //由调用程序获取输出信息
@@ -63,7 +63,7 @@ public class DebugModel
         return proc.StandardOutput.ReadToEnd();
     }
 
-    public string LangToShell()
+    private string LangToShell()
     {
         string shell = "cat>"+_codefile+@"<<\EOF "+"\n"+_code+"\n"+"EOF"+"\n";
         switch (_lang)
