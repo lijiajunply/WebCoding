@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCoding.WebApi", "WebCoding.WebApi\WebCoding.WebApi.csproj", "{E2E05DEF-DDB3-4CB9-BF51-C588532D72A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCoding.App", "WebCoding.App\WebCoding.App.csproj", "{EA156DB6-45E7-47B8-86DB-CDE4BDE7E15B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{E2E05DEF-DDB3-4CB9-BF51-C588532D72A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2E05DEF-DDB3-4CB9-BF51-C588532D72A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2E05DEF-DDB3-4CB9-BF51-C588532D72A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA156DB6-45E7-47B8-86DB-CDE4BDE7E15B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA156DB6-45E7-47B8-86DB-CDE4BDE7E15B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA156DB6-45E7-47B8-86DB-CDE4BDE7E15B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA156DB6-45E7-47B8-86DB-CDE4BDE7E15B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
