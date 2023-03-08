@@ -19,6 +19,7 @@
     "qs": "^6.11.0",
     "script-loader": "^0.7.2",
     "vue": "^3.2.47",
+    "vue-axios": "^3.5.2",
     "vue-codemirror": "^6.1.1"
   },
   "devDependencies": {
