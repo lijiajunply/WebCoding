@@ -4,17 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="./node_modules/codemirror/lib//codemirror.css">
-    <script src="./node_modules/codemirror/lib//codemirror.js"></script>
-    <script src="./node_modules/codemirror/mode/sql/sql.js"></script>
-    <script src="./node_modules/codemirror/addon/edit/matchbrackets.js"></script>
-    <link rel="stylesheet" href="./node_modules/codemirror/addon/hint/show-hint.css">
-    <script src="./node_modules/codemirror/addon/hint/show-hint.js"></script>
-    <script src="./node_modules/codemirror/addon/hint/sql-hint.js"></script>
 </head>
 
 <body>
-    <textarea id="root" />
+    <textarea id="root" ></textarea>
     <script>
         var editor = CodeMirror.fromTextArea(document.getElementById('root'), {
             lineNumbers: true, // 显示行号
