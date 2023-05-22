@@ -4,38 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link href=codemirror/lib/codemirror.css rel=stylesheet type=text/css>
+    <link href=codemirror/theme/monokai.css rel=stylesheet type=text/css>
+    <link href=codemirror/addon/display/fullscreen.css rel=stylesheet type=text/css>
+    <!-- 引入CodeMirror核心文件 -->
+    <script type=text/javascript src=codemirror/src/codemirror.js></script>
+
+    <!-- CodeMirror支持不同语言，根据需要引入JS文件 -->
+    <!-- 因为HTML混合语言依赖Javascript、XML、CSS语言支持，所以都要引入 -->
+    <script type=text/javascript src=codemirror/mode/javascript/javascript.js></script>
+    <script type=text/javascript src=codemirror/mode/xml/xml.js></script>
+    <script type=text/javascript src=codemirror/mode/css/css.js></script>
+    <script type=text/javascript src=codemirror/mode/htmlmixed/htmlmixed.js></script>
+
+    <!-- 下面分别为显示行数、括号匹配和全屏插件 -->
+    <script type=text/javascript src=codemirror/addon/selection/active-line.js></script>
+    <script type=text/javascript src=codemirror/addon/edit/matchbrackets.js></script>
+    <script type=text/javascript src=codemirror/addon/display/fullscreen.js></script>
 </head>
 
 <body>
-    <textarea id="root" ></textarea>
+    <form action=post.php method=post>
+        <textarea id=code name=code><?= $code ?></textarea>
+    </form>
     <script>
-        var editor = CodeMirror.fromTextArea(document.getElementById('root'), {
-            lineNumbers: true, // 显示行号
+        var editor = CodeMirror.fromTextArea(document.getElementById(code), {
+            lineNumbers: true,     // 显示行数
+            indentUnit: 4,         // 缩进单位为4
+            styleActiveLine: true, // 当前行背景高亮
+            matchBrackets: true,   // 括号匹配
+            mode: 'htmlmixed',     // HMTL混合模式
+            lineWrapping: true,    // 自动换行
+            theme: 'monokai',      // 使用monokai模版
         });
-        const ignore = ['', '#', '!', '-', '=', '@', '$', '%', '&', '+', ';', '(', ')', '*'];
-        const ignoreToken = (text) => {
-            if (text && text[0]) {
-                for (const pre in ignore) {
-                    if (ignore[pre] === text[0]) {
-                        return true;
-                    }
-                }
-            } else {
-                return true;
-            }
-            return false;
-        };
-
-        editor.on("change", function (editor, change) {
-            if (change.origin == "+input") {
-                var text = change.text;
-                //不提示
-                if (!ignoreToken(text))
-                    setTimeout(function () {
-                        editor.execCommand("autocomplete");
-                    }, 20);
+        editor.setOption("extraKeys", {
+            // Tab键换成4个空格
+            Tab: function (cm) {
+                var spaces = Array(cm.getOption("indentUnit") + 1).join(" ");
+                cm.replaceSelection(spaces);
+            },
+            // F11键切换全屏
+            F11: function (cm) {
+                cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+            },
+            // Esc键退出全屏
+            Esc: function (cm) {
+                if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
             }
         });
+        $(form).on('submit', function(e){
+            editor.save();
+            // 或者获取数据
+            // var data = editor.getValue();
+        })
     </script>
 </body>
 
