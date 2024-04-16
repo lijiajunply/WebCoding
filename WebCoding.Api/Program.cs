@@ -23,7 +23,7 @@ api.MapPost("", async (CodeModel model) =>
     proc.StartInfo.RedirectStandardError = true; //重定向标准错误输出
     proc.Start();
     
-    var order = $"cat>text.{model.Lang} <<EOF {Environment.NewLine} {model.Code} {Environment.NewLine} EOF {Environment.NewLine}";
+    var order = $@"\ cat>text.{model.Lang} <<EOF {Environment.NewLine} {model.Code} {Environment.NewLine} EOF {Environment.NewLine}";
     order += model.Lang switch
     {
         "c" => "gcc text.c && a.out",
@@ -34,8 +34,7 @@ api.MapPost("", async (CodeModel model) =>
         "py2" => "python2 text.py2",
         _ => null
     };
-    Console.WriteLine($"docker exec -i -t ubuntu /bin/sh{Environment.NewLine}{order}");
-    await proc.StandardInput.WriteLineAsync("docker exec -i -t ubuntu /bin/bash");
+    Console.WriteLine(order);
     await proc.StandardInput.WriteLineAsync(order);
     proc.StandardInput.Close();
     var endAsync = await proc.StandardOutput.ReadToEndAsync();
@@ -45,7 +44,7 @@ api.MapPost("", async (CodeModel model) =>
     return endAsync;
 });
 
-api.MapPost("/Order",async (string order) =>
+api.MapPost("Order",async (string order) =>
 {
     Console.WriteLine(order);
     try
