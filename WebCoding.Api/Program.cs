@@ -57,7 +57,6 @@ app.MapPost("Order",async (string order) =>
         proc.StartInfo.RedirectStandardInput = true; //接受来自调用程序的输入信息
         proc.StartInfo.RedirectStandardOutput = true; //由调用程序获取输出信息
         proc.StartInfo.RedirectStandardError = true; //重定向标准错误输出
-        proc.StartInfo.CreateNoWindow = true; 
         proc.Start();
         await proc.StandardInput.WriteLineAsync(order);
         proc.StandardInput.Close();
@@ -75,6 +74,21 @@ app.MapPost("Order",async (string order) =>
 });
 
 app.Run();
+
+var proc = new Process();
+proc.StartInfo.FileName = "/bin/sh";
+proc.StartInfo.RedirectStandardInput = true; //接受来自调用程序的输入信息
+proc.StartInfo.RedirectStandardOutput = true; //由调用程序获取输出信息
+proc.StartInfo.RedirectStandardError = true; //重定向标准错误输出
+proc.Start();
+
+await proc.StandardInput.WriteLineAsync("uname -a");
+proc.StandardInput.Close();
+var endAsync = await proc.StandardOutput.ReadToEndAsync();
+Console.WriteLine(endAsync);
+proc.Close();
+proc.Dispose();
+
 
 /*var folder = new DirectoryInfo("Code");
 folder.Create();*/
