@@ -9,10 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.WebCoding/Docker/docker-compose.generated.override.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebCoding.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebCoding.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebCoding.Api/WebCoding.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebCoding.Api/WebCoding.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebCoding.sln" beforeDir="false" afterPath="$PROJECT_DIR$/WebCoding.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,16 +40,15 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/RiderProjects/WebCoding/Test/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="HttpClientSelectedEnvironments">
     <file url="file://$USER_HOME$/AppData/Local/Temp/whats-new-dir/whats-new.http" environment="test" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -67,6 +68,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Docker.WebCoding.Api/Dockerfile.executor": "Run",
+    "Docker.docker-compose.yml: Compose 部署.executor": "Run",
     "Docker.webcoding.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -87,7 +89,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET 项目.Test">
+  <component name="RunManager" selected="Docker.WebCoding.Api/Dockerfile">
     <configuration name="Test" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -121,6 +123,27 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="WebCoding.Api/Dockerfile (1)" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="webcoding.api" />
+          <option name="containerName" value="webcoding.api" />
+          <option name="contextFolderPath" value="C:\Projects\RiderProjects\WebCoding" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8080" />
+                <option name="hostIp" value="127.0.0.1" />
+                <option name="hostPort" value="8080" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="sourceFilePath" value="WebCoding.Api/Dockerfile" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="WebCoding.Api/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker WSL">
       <deployment type="dockerfile">
         <settings>
@@ -141,6 +164,10 @@
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-image" temporary="true">
       <deployment type="docker-image">
         <settings />
@@ -150,6 +177,15 @@
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile">
         <settings />
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
       </deployment>
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
@@ -166,6 +202,8 @@
     <list>
       <item itemvalue=".NET 启动设置配置文件.WebCoding.Api: http" />
       <item itemvalue=".NET 项目.Test" />
+      <item itemvalue="Docker.WebCoding.Api/Dockerfile (1)" />
+      <item itemvalue="Docker.docker-compose.yml: Compose 部署" />
       <item itemvalue="Docker.WebCoding.Api/Dockerfile" />
       <item itemvalue="Docker.webcoding" />
     </list>
@@ -187,6 +225,7 @@
       <workItem from="1713200528811" duration="708000" />
       <workItem from="1713234607779" duration="5320000" />
       <workItem from="1713242450134" duration="509000" />
+      <workItem from="1713247893291" duration="2853000" />
     </task>
     <task id="LOCAL-00001" summary="init proj">
       <option name="closed" value="true" />
@@ -236,7 +275,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713236286272</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="添加指令">
+      <option name="closed" value="true" />
+      <created>1713248795562</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713248795562</updated>
+    </task>
+    <task id="LOCAL-00008" summary="再试试">
+      <option name="closed" value="true" />
+      <created>1713248942607</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713248942607</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +308,8 @@
     <MESSAGE value="dotnet环境" />
     <MESSAGE value="指令" />
     <MESSAGE value="再试一下" />
-    <option name="LAST_COMMIT_MESSAGE" value="再试一下" />
+    <MESSAGE value="添加指令" />
+    <MESSAGE value="再试试" />
+    <option name="LAST_COMMIT_MESSAGE" value="再试试" />
   </component>
 </project>

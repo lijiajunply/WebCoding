@@ -47,21 +47,30 @@ api.MapPost("", async (CodeModel model) =>
 
 api.MapPost("/Order",async (string order) =>
 {
-    var proc = new Process();
-    //proc.StartInfo.FileName = "/bin/bash";
-    proc.StartInfo.UseShellExecute = false; //是否使用操作系统shell启动
-    proc.StartInfo.RedirectStandardInput = true; //接受来自调用程序的输入信息
-    proc.StartInfo.RedirectStandardOutput = true; //由调用程序获取输出信息
-    proc.StartInfo.RedirectStandardError = true; //重定向标准错误输出
-    proc.Start();
-    
-    await proc.StandardInput.WriteLineAsync(order);
-    proc.StandardInput.Close();
-    var endAsync = await proc.StandardOutput.ReadToEndAsync();
-    Console.WriteLine(endAsync);
-    proc.Close();
-    proc.Dispose();
-    return endAsync;
+    Console.WriteLine(order);
+    try
+    {
+        var proc = new Process();
+        proc.StartInfo.FileName = "/bin/sh";
+        proc.StartInfo.UseShellExecute = false; //是否使用操作系统shell启动
+        proc.StartInfo.RedirectStandardInput = true; //接受来自调用程序的输入信息
+        proc.StartInfo.RedirectStandardOutput = true; //由调用程序获取输出信息
+        proc.StartInfo.RedirectStandardError = true; //重定向标准错误输出
+        proc.Start();
+        await proc.StandardInput.WriteLineAsync("/bin/bash");
+        await proc.StandardInput.WriteLineAsync(order);
+        proc.StandardInput.Close();
+        var endAsync = await proc.StandardOutput.ReadToEndAsync();
+        Console.WriteLine(endAsync);
+        proc.Close();
+        proc.Dispose();
+        return endAsync;
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e);
+        throw;
+    }
 });
 
 app.Run();

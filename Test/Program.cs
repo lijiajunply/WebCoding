@@ -14,9 +14,9 @@ using var client = new HttpClient();
 // Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 const string order = """
-                     hostname
+                     uname -a
                      """;
-var response = await client.PostAsJsonAsync("https://code.zeabur.app/Order",order);
+var response = await client.PostAsJsonAsync("http://[::]:8080/Order",order);
 Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 internal record CodeModel
