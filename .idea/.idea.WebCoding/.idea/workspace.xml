@@ -8,7 +8,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="再试试" />
+    <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="再试试">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Program.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +37,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/Test/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="HttpClientSelectedEnvironments">
@@ -224,7 +228,7 @@
       <workItem from="1713242450134" duration="509000" />
       <workItem from="1713247893291" duration="2853000" />
       <workItem from="1713251599956" duration="791000" />
-      <workItem from="1713274574928" duration="2948000" />
+      <workItem from="1713274574928" duration="3865000" />
     </task>
     <task id="LOCAL-00001" summary="init proj">
       <option name="closed" value="true" />
@@ -314,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713277449547</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="再试试">
+      <option name="closed" value="true" />
+      <created>1713277678071</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713277678072</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,5 +348,24 @@
     <MESSAGE value="试试" />
     <MESSAGE value="再试试" />
     <option name="LAST_COMMIT_MESSAGE" value="再试试" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebCoding.Api/Program.cs</url>
+          <line>59</line>
+          <properties documentPath="C:\Projects\RiderProjects\WebCoding\WebCoding.Api\Program.cs" containingFunctionPresentation="">
+            <startOffsets>
+              <option value="2017" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2044" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

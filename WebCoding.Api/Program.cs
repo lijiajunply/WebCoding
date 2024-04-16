@@ -11,8 +11,7 @@ builder.Services.ConfigureHttpJsonOptions(options =>
 
 var app = builder.Build();
 
-var api = app.MapGroup("/");
-api.MapPost("", async (CodeModel model) =>
+app.MapPost("", async (CodeModel model) =>
 {
     Console.WriteLine(JsonSerializer.Serialize(model));
     var proc = new Process();
@@ -43,7 +42,7 @@ api.MapPost("", async (CodeModel model) =>
     return endAsync;
 });
 
-api.MapPost("Order",async (string order) =>
+app.MapPost("Order",async (string order) =>
 {
     Console.WriteLine(order);
     try

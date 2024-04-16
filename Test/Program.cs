@@ -5,18 +5,18 @@ using System.Net.Http.Json;
 using var client = new HttpClient();
 
 https://code.zeabur.app/
-var response = await client.PostAsJsonAsync("https://code.zeabur.app", new CodeModel
-{
-    Code = "def main():\n    print(\"Hello, World!\")\n",
-    Lang = "py"
-});
-
-Console.WriteLine(await response.Content.ReadAsStringAsync());
+// var response = await client.PostAsJsonAsync("https://code.zeabur.app", new CodeModel
+// {
+//     Code = "def main():\n    print(\"Hello, World!\")\n",
+//     Lang = "py"
+// });
+//
+// Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 const string order = """
                      uname -a
                      """;
-response = await client.PostAsJsonAsync("https://code.zeabur.app/Order",order);
+var response = await client.PostAsJsonAsync("https://code.zeabur.app/Order",order);
 Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 internal record CodeModel
