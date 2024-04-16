@@ -16,14 +16,14 @@ api.MapPost("", async (CodeModel model) =>
 {
     Console.WriteLine(JsonSerializer.Serialize(model));
     var proc = new Process();
-    proc.StartInfo.FileName = "/bin/bash";
+    proc.StartInfo.FileName = "/bin/sh";
     proc.StartInfo.UseShellExecute = false; //是否使用操作系统shell启动
     proc.StartInfo.RedirectStandardInput = true; //接受来自调用程序的输入信息
     proc.StartInfo.RedirectStandardOutput = true; //由调用程序获取输出信息
     proc.StartInfo.RedirectStandardError = true; //重定向标准错误输出
     proc.Start();
-    await  proc.StandardInput.WriteLineAsync("docker exec -i -t ubuntu /bin/bash");
-    var order = $"cat>text.{model.Lang} <<EOF {Environment.CommandLine} {model.Code} {Environment.CommandLine} EOF {Environment.CommandLine}";
+    
+    var order = $"cat>text.{model.Lang} <<EOF {Environment.NewLine} {model.Code} {Environment.NewLine} EOF {Environment.NewLine}";
     order += model.Lang switch
     {
         "c" => "gcc text.c && a.out",
@@ -34,6 +34,27 @@ api.MapPost("", async (CodeModel model) =>
         "py2" => "python2 text.py2",
         _ => null
     };
+    Console.WriteLine($"docker exec -i -t ubuntu /bin/sh{Environment.NewLine}{order}");
+    await proc.StandardInput.WriteLineAsync("docker exec -i -t ubuntu /bin/bash");
+    await proc.StandardInput.WriteLineAsync(order);
+    proc.StandardInput.Close();
+    var endAsync = await proc.StandardOutput.ReadToEndAsync();
+    Console.WriteLine(endAsync);
+    proc.Close();
+    proc.Dispose();
+    return endAsync;
+});
+
+api.MapPost("/Order",async (string order) =>
+{
+    var proc = new Process();
+    proc.StartInfo.FileName = "/bin/sh";
+    proc.StartInfo.UseShellExecute = false; //是否使用操作系统shell启动
+    proc.StartInfo.RedirectStandardInput = true; //接受来自调用程序的输入信息
+    proc.StartInfo.RedirectStandardOutput = true; //由调用程序获取输出信息
+    proc.StartInfo.RedirectStandardError = true; //重定向标准错误输出
+    proc.Start();
+    
     await proc.StandardInput.WriteLineAsync(order);
     proc.StandardInput.Close();
     var endAsync = await proc.StandardOutput.ReadToEndAsync();
@@ -44,6 +65,9 @@ api.MapPost("", async (CodeModel model) =>
 });
 
 app.Run();
+
+/*var folder = new DirectoryInfo("Code");
+folder.Create();*/
 
 internal record CodeModel
 {

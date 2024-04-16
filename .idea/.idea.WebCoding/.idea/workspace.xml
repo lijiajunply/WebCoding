@@ -9,9 +9,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebCoding.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebCoding.Api/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,25 +25,33 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "lijiajunply"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;lijiajunply&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/lijiajunply/WebCoding.git",
-    "accountId": "178fd1c1-455a-4fb0-879b-55b1a7a6f881"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/lijiajunply/WebCoding.git&quot;,
+    &quot;accountId&quot;: &quot;178fd1c1-455a-4fb0-879b-55b1a7a6f881&quot;
   }
-}]]></component>
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="HttpClientSelectedEnvironments">
     <file url="file://$USER_HOME$/AppData/Local/Temp/whats-new-dir/whats-new.http" environment="test" />
   </component>
-  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
 }]]></component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2f95bo5BCYbT3cBJhEiLZku2CcR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -57,6 +66,8 @@
     ".NET 项目.Test.executor": "Run",
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Docker.WebCoding.Api/Dockerfile.executor": "Run",
+    "Docker.webcoding.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
@@ -110,12 +121,11 @@
         <option name="Build" />
       </method>
     </configuration>
-    <configuration name="WebCoding.Api/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+    <configuration name="WebCoding.Api/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker WSL">
       <deployment type="dockerfile">
         <settings>
           <option name="imageTag" value="webcoding.api" />
           <option name="containerName" value="webcoding.api" />
-          <option name="contextFolderPath" value="C:\Projects\RiderProjects\WebCoding" />
           <option name="portBindings">
             <list>
               <DockerPortBindingImpl>
@@ -125,16 +135,45 @@
               </DockerPortBindingImpl>
             </list>
           </option>
-          <option name="sourceFilePath" value="WebCoding.Api/Dockerfile" />
+          <option name="sourceFilePath" value="Dockerfile" />
         </settings>
       </deployment>
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+    <configuration default="true" type="docker-deploy" factoryName="docker-image" temporary="true">
+      <deployment type="docker-image">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="webcoding" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker WSL">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="webcoding.api:latest" />
+          <option name="containerName" value="" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue=".NET 启动设置配置文件.WebCoding.Api: http" />
+      <item itemvalue=".NET 项目.Test" />
+      <item itemvalue="Docker.WebCoding.Api/Dockerfile" />
+      <item itemvalue="Docker.webcoding" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.webcoding" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -146,6 +185,8 @@
       <updated>1689322211966</updated>
       <workItem from="1689322215509" duration="266000" />
       <workItem from="1713200528811" duration="708000" />
+      <workItem from="1713234607779" duration="5320000" />
+      <workItem from="1713242450134" duration="509000" />
     </task>
     <task id="LOCAL-00001" summary="init proj">
       <option name="closed" value="true" />
@@ -171,7 +212,31 @@
       <option name="project" value="LOCAL" />
       <updated>1713201024373</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="dotnet环境">
+      <option name="closed" value="true" />
+      <created>1713235009843</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713235009843</updated>
+    </task>
+    <task id="LOCAL-00005" summary="指令">
+      <option name="closed" value="true" />
+      <created>1713236004641</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713236004641</updated>
+    </task>
+    <task id="LOCAL-00006" summary="再试一下">
+      <option name="closed" value="true" />
+      <created>1713236286272</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713236286272</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +250,9 @@
     <MESSAGE value="init proj" />
     <MESSAGE value="添加docker" />
     <MESSAGE value="Aot 关闭" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aot 关闭" />
+    <MESSAGE value="dotnet环境" />
+    <MESSAGE value="指令" />
+    <MESSAGE value="再试一下" />
+    <option name="LAST_COMMIT_MESSAGE" value="再试一下" />
   </component>
 </project>
