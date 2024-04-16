@@ -8,7 +8,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="" />
+    <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="试试">
+      <change afterPath="$PROJECT_DIR$/Test/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Program.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +66,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET 启动设置配置文件.WebCoding.Api: http.executor": "Run",
-    ".NET 项目.Test.executor": "Run",
+    ".NET 项目.Test.executor": "Debug",
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Docker.WebCoding.Api/Dockerfile.executor": "Run",
@@ -230,6 +233,7 @@
       <workItem from="1713247893291" duration="2853000" />
       <workItem from="1713251599956" duration="791000" />
       <workItem from="1713274574928" duration="6626000" />
+      <workItem from="1713281480450" duration="2106000" />
     </task>
     <task id="LOCAL-00001" summary="init proj">
       <option name="closed" value="true" />
@@ -391,7 +395,39 @@
       <option name="project" value="LOCAL" />
       <updated>1713281212635</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="试试">
+      <option name="closed" value="true" />
+      <created>1713281758514</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1713281758514</updated>
+    </task>
+    <task id="LOCAL-00022" summary="试试">
+      <option name="closed" value="true" />
+      <created>1713281939096</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1713281939096</updated>
+    </task>
+    <task id="LOCAL-00023" summary="试试">
+      <option name="closed" value="true" />
+      <created>1713282063178</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1713282063178</updated>
+    </task>
+    <task id="LOCAL-00024" summary="试试">
+      <option name="closed" value="true" />
+      <created>1713282398546</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1713282398546</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,6 +467,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Test/Program.cs</url>
+          <line>16</line>
+          <properties documentPath="C:\Projects\RiderProjects\WebCoding\Test\Program.cs" containingFunctionPresentation="">
+            <startOffsets>
+              <option value="491" />
+            </startOffsets>
+            <endOffsets>
+              <option value="553" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

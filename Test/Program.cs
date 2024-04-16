@@ -7,16 +7,15 @@ using var client = new HttpClient();
 https://code.zeabur.app/
 var response = await client.PostAsJsonAsync("https://code.zeabur.app", new CodeModel
 {
-    Code = "print(\"Hello, World!\")",
+    Code = File.ReadAllText(@"C:\Projects\RiderProjects\WebCoding\Test\test.py"),
     Lang = "py"
 });
 
-Console.WriteLine(await response.Content.ReadAsStringAsync());
+var result = await response.Content.ReadAsStringAsync();
 
-const string order = """
-                     uname -a
-                     """;
-response = await client.PostAsJsonAsync("https://code.zeabur.app/Order",order);
+Console.WriteLine(result);
+
+response = await client.PostAsJsonAsync("https://code.zeabur.app/Order", "ls");
 Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 internal record CodeModel

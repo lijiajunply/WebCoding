@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
@@ -41,36 +42,28 @@ app.MapPost("", async (CodeModel model) =>
     Console.WriteLine(endAsync);
     proc.Close();
     proc.Dispose();
-    
+
     File.Delete($"text.{model.Lang}");
-    
+
     return Results.Ok(endAsync);
 });
 
-app.MapPost("Order",async (string order) =>
+app.MapPost("Order", async ([FromBody]string order) =>
 {
-    try
-    {
-        Console.WriteLine(order);
-        var proc = new Process();
-        proc.StartInfo.FileName = "/bin/sh";
-        proc.StartInfo.RedirectStandardInput = true; //接受来自调用程序的输入信息
-        proc.StartInfo.RedirectStandardOutput = true; //由调用程序获取输出信息
-        proc.StartInfo.RedirectStandardError = true; //重定向标准错误输出
-        proc.Start();
-        await proc.StandardInput.WriteLineAsync(order);
-        proc.StandardInput.Close();
-        var endAsync = await proc.StandardOutput.ReadToEndAsync();
-        Console.WriteLine(endAsync);
-        proc.Close();
-        proc.Dispose();
-        return Results.Ok(endAsync);
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e);
-        return Results.BadRequest();
-    }
+    Console.WriteLine(order);
+    var proc = new Process();
+    proc.StartInfo.FileName = "/bin/sh";
+    proc.StartInfo.RedirectStandardInput = true; //接受来自调用程序的输入信息
+    proc.StartInfo.RedirectStandardOutput = true; //由调用程序获取输出信息
+    proc.StartInfo.RedirectStandardError = true; //重定向标准错误输出
+    proc.Start();
+    await proc.StandardInput.WriteLineAsync(order);
+    proc.StandardInput.Close();
+    var endAsync = await proc.StandardOutput.ReadToEndAsync();
+    Console.WriteLine(endAsync);
+    proc.Close();
+    proc.Dispose();
+    return Results.Ok(endAsync);
 });
 
 app.Run();
