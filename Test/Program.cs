@@ -14,10 +14,9 @@ using var client = new HttpClient();
 // Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 const string order = """
-                     docker exec -i -t ubuntu /bin/sh \
-                     echo ls>test.sh && chmod +x test.sh && ./test.sh \
+                     hostname
                      """;
-var response = await client.PostAsJsonAsync("http://127.0.0.1:8080/Order",order);
+var response = await client.PostAsJsonAsync("https://code.zeabur.app/Order",order);
 Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 internal record CodeModel
