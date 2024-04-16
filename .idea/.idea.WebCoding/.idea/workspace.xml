@@ -9,6 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="试试">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebCoding.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebCoding.Api/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +40,8 @@
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/Test/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/Test/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/Test/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -229,7 +233,7 @@
       <workItem from="1713242450134" duration="509000" />
       <workItem from="1713247893291" duration="2853000" />
       <workItem from="1713251599956" duration="791000" />
-      <workItem from="1713274574928" duration="5393000" />
+      <workItem from="1713274574928" duration="6028000" />
     </task>
     <task id="LOCAL-00001" summary="init proj">
       <option name="closed" value="true" />
@@ -343,7 +347,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713279748074</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="试试">
+      <option name="closed" value="true" />
+      <created>1713280087283</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1713280087285</updated>
+    </task>
+    <task id="LOCAL-00016" summary="试试">
+      <option name="closed" value="true" />
+      <created>1713280327958</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1713280327958</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,42 +392,16 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WebCoding.Api/Program.cs</url>
-          <line>62</line>
+          <line>61</line>
           <properties documentPath="C:\Projects\RiderProjects\WebCoding\WebCoding.Api\Program.cs" containingFunctionPresentation="">
             <startOffsets>
-              <option value="2028" />
+              <option value="1981" />
             </startOffsets>
             <endOffsets>
-              <option value="2055" />
+              <option value="2008" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Test/Program.cs</url>
-          <line>13</line>
-          <properties documentPath="C:\Projects\RiderProjects\WebCoding\Test\Program.cs" containingFunctionPresentation="">
-            <startOffsets>
-              <option value="304" />
-            </startOffsets>
-            <endOffsets>
-              <option value="366" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Test/Program.cs</url>
-          <line>19</line>
-          <properties documentPath="C:\Projects\RiderProjects\WebCoding\Test\Program.cs" containingFunctionPresentation="">
-            <startOffsets>
-              <option value="529" />
-            </startOffsets>
-            <endOffsets>
-              <option value="591" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

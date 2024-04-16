@@ -21,3 +21,13 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WebCoding.Api.dll"]
+RUN apt update && apt install -y python3 \
+    && apt install -y openjdk-17-jre-headless \
+    && apt install -y gcc \
+    && apt install -y g++ \
+    && apt install -y go \
+    && apt install -y python3-pip \
+    && pip3 install --upgrade pip \
+    && pip3 install requests \
+    && pip3 install numpy \
+    && pip3 install pandas \
