@@ -39,14 +39,14 @@ app.MapPost("", async (CodeModel model) =>
     Console.WriteLine(endAsync);
     proc.Close();
     proc.Dispose();
-    return endAsync;
+    return Results.Ok(endAsync);
 });
 
 app.MapPost("Order",async (string order) =>
 {
-    Console.WriteLine(order);
     try
     {
+        Console.WriteLine(order);
         var proc = new Process();
         proc.StartInfo.FileName = "/bin/sh";
         proc.StartInfo.RedirectStandardInput = true; //接受来自调用程序的输入信息
@@ -54,19 +54,18 @@ app.MapPost("Order",async (string order) =>
         proc.StartInfo.RedirectStandardError = true; //重定向标准错误输出
         proc.StartInfo.CreateNoWindow = true; 
         proc.Start();
-        await proc.StandardInput.WriteLineAsync("/bin/bash");
         await proc.StandardInput.WriteLineAsync(order);
         proc.StandardInput.Close();
         var endAsync = await proc.StandardOutput.ReadToEndAsync();
         Console.WriteLine(endAsync);
         proc.Close();
         proc.Dispose();
-        return endAsync;
+        return Results.Ok(endAsync);
     }
     catch (Exception e)
     {
         Console.WriteLine(e);
-        throw;
+        return Results.BadRequest();
     }
 });
 
