@@ -22,9 +22,8 @@ api.MapPost("", async (CodeModel model) =>
     proc.StartInfo.RedirectStandardOutput = true; //由调用程序获取输出信息
     proc.StartInfo.RedirectStandardError = true; //重定向标准错误输出
     proc.Start();
-    var shell =
-        $"cat>text.{model.Lang} <<EOF {Environment.CommandLine} {model.Code} {Environment.CommandLine} EOF {Environment.CommandLine}";
-    var order = $"docker run -i cat>text.{model.Lang} <<EOF {Environment.CommandLine} {model.Code} {Environment.CommandLine} EOF {Environment.CommandLine}";
+    await  proc.StandardInput.WriteLineAsync("docker exec -i -t ubuntu /bin/bash");
+    var order = $"cat>text.{model.Lang} <<EOF {Environment.CommandLine} {model.Code} {Environment.CommandLine} EOF {Environment.CommandLine}";
     order += model.Lang switch
     {
         "c" => "gcc text.c && a.out",
