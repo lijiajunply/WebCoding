@@ -8,9 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="啧">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Program.cs" afterDir="false" />
+    <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="试试">
       <change beforePath="$PROJECT_DIR$/WebCoding.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebCoding.Api/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +37,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/Test/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/Test/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/RiderProjects/WebCoding/Test/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -64,7 +63,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET 启动设置配置文件.WebCoding.Api: http.executor": "Run",
-    ".NET 项目.Test.executor": "Debug",
+    ".NET 项目.Test.executor": "Run",
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Docker.WebCoding.Api/Dockerfile.executor": "Run",
@@ -230,7 +229,7 @@
       <workItem from="1713242450134" duration="509000" />
       <workItem from="1713247893291" duration="2853000" />
       <workItem from="1713251599956" duration="791000" />
-      <workItem from="1713274574928" duration="4949000" />
+      <workItem from="1713274574928" duration="5393000" />
     </task>
     <task id="LOCAL-00001" summary="init proj">
       <option name="closed" value="true" />
@@ -336,7 +335,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713278672371</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="试试">
+      <option name="closed" value="true" />
+      <created>1713279748074</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1713279748074</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,23 +362,23 @@
     <MESSAGE value="再试一下" />
     <MESSAGE value="添加指令" />
     <MESSAGE value="试一下" />
-    <MESSAGE value="试试" />
     <MESSAGE value="再试试" />
     <MESSAGE value="啧" />
-    <option name="LAST_COMMIT_MESSAGE" value="啧" />
+    <MESSAGE value="试试" />
+    <option name="LAST_COMMIT_MESSAGE" value="试试" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WebCoding.Api/Program.cs</url>
-          <line>57</line>
+          <line>62</line>
           <properties documentPath="C:\Projects\RiderProjects\WebCoding\WebCoding.Api\Program.cs" containingFunctionPresentation="">
             <startOffsets>
-              <option value="1930" />
+              <option value="2028" />
             </startOffsets>
             <endOffsets>
-              <option value="1957" />
+              <option value="2055" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />

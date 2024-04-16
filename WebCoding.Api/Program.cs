@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -20,9 +21,10 @@ app.MapPost("", async (CodeModel model) =>
     proc.StartInfo.RedirectStandardOutput = true; //由调用程序获取输出信息
     proc.StartInfo.RedirectStandardError = true; //重定向标准错误输出
     proc.Start();
-    
-    var order = $@"\ cat>text.{model.Lang} <<EOF {Environment.NewLine} {model.Code} {Environment.NewLine} EOF {Environment.NewLine}";
-    order += model.Lang switch
+
+    await using var write = new FileStream($"text.{model.Lang}", FileMode.OpenOrCreate);
+    await write.WriteAsync(Encoding.UTF8.GetBytes(model.Code));
+    var order = model.Lang switch
     {
         "c" => "gcc text.c && a.out",
         "cpp" => "g++ -std=c++11 text.cpp && a.out",
@@ -39,6 +41,9 @@ app.MapPost("", async (CodeModel model) =>
     Console.WriteLine(endAsync);
     proc.Close();
     proc.Dispose();
+    
+    File.Delete($"text.{model.Lang}");
+    
     return Results.Ok(endAsync);
 });
 
