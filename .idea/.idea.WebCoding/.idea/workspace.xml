@@ -8,11 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="试试">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebCoding.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebCoding.Api/Program.cs" afterDir="false" />
-    </list>
+    <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -233,7 +229,7 @@
       <workItem from="1713242450134" duration="509000" />
       <workItem from="1713247893291" duration="2853000" />
       <workItem from="1713251599956" duration="791000" />
-      <workItem from="1713274574928" duration="6028000" />
+      <workItem from="1713274574928" duration="6626000" />
     </task>
     <task id="LOCAL-00001" summary="init proj">
       <option name="closed" value="true" />
@@ -363,7 +359,39 @@
       <option name="project" value="LOCAL" />
       <updated>1713280327958</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="更新docker">
+      <option name="closed" value="true" />
+      <created>1713280825640</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1713280825640</updated>
+    </task>
+    <task id="LOCAL-00018" summary="再试试">
+      <option name="closed" value="true" />
+      <created>1713281015471</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1713281015471</updated>
+    </task>
+    <task id="LOCAL-00019" summary="试试">
+      <option name="closed" value="true" />
+      <created>1713281139247</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1713281139247</updated>
+    </task>
+    <task id="LOCAL-00020" summary="试试">
+      <option name="closed" value="true" />
+      <created>1713281212635</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1713281212635</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,8 +410,9 @@
     <MESSAGE value="再试一下" />
     <MESSAGE value="添加指令" />
     <MESSAGE value="试一下" />
-    <MESSAGE value="再试试" />
     <MESSAGE value="啧" />
+    <MESSAGE value="更新docker" />
+    <MESSAGE value="再试试" />
     <MESSAGE value="试试" />
     <option name="LAST_COMMIT_MESSAGE" value="试试" />
   </component>
