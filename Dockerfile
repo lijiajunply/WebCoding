@@ -21,10 +21,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WebCoding.Api.dll"]
-RUN apt-get install -y openjdk-17-jre-headless \
+RUN apt-get update && apt-get install -y openjdk-17-jre-headless \
     gcc \
     g++ \
-    dotnet-sdk-8.0 \
-    python3 \
-    python3-pip
-    
+    python3-full \
