@@ -8,9 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="shishui">
-      <change beforePath="$PROJECT_DIR$/Test/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Program.cs" afterDir="false" />
-    </list>
+    <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="试一下" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -434,7 +432,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713329270582</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="试一下">
+      <option name="closed" value="true" />
+      <created>1713329549756</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1713329549756</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,13 +458,13 @@
     <MESSAGE value="指令" />
     <MESSAGE value="再试一下" />
     <MESSAGE value="添加指令" />
-    <MESSAGE value="试一下" />
     <MESSAGE value="啧" />
     <MESSAGE value="更新docker" />
     <MESSAGE value="再试试" />
     <MESSAGE value="试试" />
     <MESSAGE value="shishui" />
-    <option name="LAST_COMMIT_MESSAGE" value="shishui" />
+    <MESSAGE value="试一下" />
+    <option name="LAST_COMMIT_MESSAGE" value="试一下" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
