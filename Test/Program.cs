@@ -13,19 +13,13 @@ var response = await client.PostAsJsonAsync("https://code.zeabur.app", new CodeM
 
 var result = await response.Content.ReadAsStringAsync();
 
-Console.WriteLine(CodeModel.Result(result));
+Console.WriteLine(result);
 
-response = await client.PostAsJsonAsync("https://code.zeabur.app/Order","python3 --version");
-result = await response.Content.ReadAsStringAsync();
-Console.WriteLine(CodeModel.Result(result));
+response = await client.PostAsJsonAsync("https://code.zeabur.app/Order", "java");
+Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 internal record CodeModel
 {
     public string Code { get; set; } = "";
     public string Lang { get; set; } = "";
-
-    public static string Result(string result)
-    {
-        return result.Replace("\"", "").Replace("\\n", "\n");
-    }
 }
