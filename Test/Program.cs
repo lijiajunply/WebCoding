@@ -7,8 +7,8 @@ using var client = new HttpClient();
 https://code.zeabur.app/
 var response = await client.PostAsJsonAsync("https://code.zeabur.app", new CodeModel
 {
-    Code = File.ReadAllText(@"C:\Projects\RiderProjects\WebCoding\Test\test.py"),
-    Lang = "py"
+    Code = "Console.WriteLine(\"Hello, World!\")",
+    Lang = "cs"
 });
 
 var result = await response.Content.ReadAsStringAsync();
