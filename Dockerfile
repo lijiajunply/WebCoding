@@ -21,10 +21,11 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WebCoding.Api.dll"]
+# Install Environments
 RUN apt-get update && apt-get install -y openjdk-17-jre-headless \
     gcc \
     g++ \
     python3 \
     golang \
-    && rm -rf /var/lib/apt/lists/* \
-    $$ dotnet tool update -g dotnet-execute \
+# Install dotnet-exec
+RUN dotnet tool update -g dotnet-execute

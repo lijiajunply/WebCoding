@@ -8,8 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="试试">
-      <change afterPath="$PROJECT_DIR$/Test/test.py" afterDir="false" />
+    <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="shishui">
       <change beforePath="$PROJECT_DIR$/Test/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +38,7 @@
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/Test/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/Test/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/Test/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/RiderProjects/WebCoding/Test/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
@@ -427,7 +426,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713282398546</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="shishui">
+      <option name="closed" value="true" />
+      <created>1713329270582</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1713329270582</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,24 +457,12 @@
     <MESSAGE value="更新docker" />
     <MESSAGE value="再试试" />
     <MESSAGE value="试试" />
-    <option name="LAST_COMMIT_MESSAGE" value="试试" />
+    <MESSAGE value="shishui" />
+    <option name="LAST_COMMIT_MESSAGE" value="shishui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebCoding.Api/Program.cs</url>
-          <line>61</line>
-          <properties documentPath="C:\Projects\RiderProjects\WebCoding\WebCoding.Api\Program.cs" containingFunctionPresentation="">
-            <startOffsets>
-              <option value="1981" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2008" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Test/Program.cs</url>
           <line>16</line>

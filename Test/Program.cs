@@ -22,4 +22,9 @@ internal record CodeModel
 {
     public string Code { get; set; } = "";
     public string Lang { get; set; } = "";
+
+    public static string Result(string result)
+    {
+        return result.Replace("\\n", "\n").Replace("\\r", "\r").Replace("\"","");
+    }
 }
