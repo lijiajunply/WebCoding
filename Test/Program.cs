@@ -13,10 +13,7 @@ var response = await client.PostAsJsonAsync("https://code.zeabur.app", new CodeM
 
 var result = await response.Content.ReadAsStringAsync();
 
-Console.WriteLine(result);
-
-response = await client.PostAsJsonAsync("https://code.zeabur.app/Order", "java");
-Console.WriteLine(await response.Content.ReadAsStringAsync());
+Console.WriteLine(CodeModel.Result(result));
 
 internal record CodeModel
 {

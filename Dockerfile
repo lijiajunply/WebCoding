@@ -25,7 +25,6 @@ ENTRYPOINT ["dotnet", "WebCoding.Api.dll"]
 RUN apt-get update && apt-get install -y openjdk-17-jre-headless \
     gcc \
     g++ \
-    python3 \
-    golang \
+    python3
 # Install dotnet-exec
-RUN dotnet tool update -g dotnet-execute
+RUN curl -sSL https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh | bash /dev/stdin -c 8.0 -i /usr/share/dotnet-exec
