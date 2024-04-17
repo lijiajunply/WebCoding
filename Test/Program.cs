@@ -4,17 +4,21 @@ using System.Net.Http.Json;
 
 using var client = new HttpClient();
 
-https://code.zeabur.app/
 var response = await client.PostAsJsonAsync("https://code.zeabur.app", new CodeModel
 {
-    Code = File.ReadAllText(@"C:\Projects\RiderProjects\WebCoding\Test\test.py"),
-    Lang = "py"
+    Code = "Console.WriteLine(\"Hello, World!\")",
+    Lang = "cs"
 });
 
 var result = await response.Content.ReadAsStringAsync();
+Console.WriteLine(CodeModel.Result(result));
+
+response = await  client.PostAsJsonAsync("https://code.zeabur.app/Order", "dotnet");
+result = await response.Content.ReadAsStringAsync();
 
 Console.WriteLine(CodeModel.Result(result));
 
+[Serializable]
 internal record CodeModel
 {
     public string Code { get; set; } = "";
