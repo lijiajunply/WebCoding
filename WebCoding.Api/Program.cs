@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
@@ -15,7 +14,6 @@ var app = builder.Build();
 
 app.MapPost("", async (CodeModel model) =>
 {
-    Console.WriteLine(JsonSerializer.Serialize(model));
     var proc = new Process();
     proc.StartInfo.FileName = "/bin/sh";
     proc.StartInfo.RedirectStandardInput = true; //接受来自调用程序的输入信息
@@ -23,8 +21,7 @@ app.MapPost("", async (CodeModel model) =>
     proc.StartInfo.RedirectStandardError = true; //重定向标准错误输出
     proc.Start();
 
-    await using var write = new FileStream($"text.{model.Lang}", FileMode.OpenOrCreate);
-    await write.WriteAsync(Encoding.UTF8.GetBytes(model.Code));
+    File.WriteAllText($"text.{model.Lang}", model.Code);
     var order = model.Lang switch
     {
         "c" => "gcc text.c && a.out",
@@ -35,11 +32,10 @@ app.MapPost("", async (CodeModel model) =>
         "py2" => "python2 text.py2",
         _ => null
     };
-    Console.WriteLine(order);
     await proc.StandardInput.WriteLineAsync(order);
     proc.StandardInput.Close();
     var endAsync = await proc.StandardOutput.ReadToEndAsync();
-    Console.WriteLine(endAsync);
+    Console.WriteLine($"结果 : {endAsync}");
     proc.Close();
     proc.Dispose();
 

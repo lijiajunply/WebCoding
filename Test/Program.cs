@@ -15,8 +15,9 @@ var result = await response.Content.ReadAsStringAsync();
 
 Console.WriteLine(result);
 
-response = await client.PostAsJsonAsync("https://code.zeabur.app/Order", "java");
-Console.WriteLine(await response.Content.ReadAsStringAsync());
+response = await client.PostAsJsonAsync("https://code.zeabur.app/Order","python3 --version");
+result = await response.Content.ReadAsStringAsync();
+Console.WriteLine(result.Replace("\"",""));
 
 internal record CodeModel
 {
