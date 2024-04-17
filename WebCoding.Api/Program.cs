@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
@@ -23,8 +22,8 @@ app.MapPost("", async (CodeModel model) =>
     proc.StartInfo.RedirectStandardError = true; //重定向标准错误输出
     proc.Start();
 
-    await using var write = new FileStream($"text.{model.Lang}", FileMode.OpenOrCreate);
-    await write.WriteAsync(Encoding.UTF8.GetBytes(model.Code));
+
+    File.WriteAllText($"text.{model.Lang}", model.Code);
     var order = model.Lang switch
     {
         "c" => "gcc text.c && a.out",
