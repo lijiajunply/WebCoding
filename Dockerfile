@@ -28,9 +28,9 @@ RUN apt-get update && apt-get install -y openjdk-17-jre-headless \
     python3 \
     wget\
 # Install Dotnet
-RUN wget https://dot.net/v1/dotnet-install.sh -O /tmp/dotnet-install.sh && \
-    chmod +x /tmp/dotnet-install.sh && \
-    /tmp/dotnet-install.sh --channel 8.0 --install-dir /usr/share/dotnet
+RUN wget https://dot.net/v1/dotnet-install.sh && \
+    chmod +x dotnet-install.sh && \
+    dotnet-install.sh --channel 8.0 --install-dir /usr/share/dotnet
 RUN dotnet tool update -g dotnet-execute
 
 
