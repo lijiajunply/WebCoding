@@ -8,7 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="增加curl">
+    <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,9 +37,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/Test/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/Test/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Projects/RiderProjects/WebCoding/Test/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Projects/RiderProjects/WebCoding/Test/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/RiderProjects/WebCoding/WebCoding.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -235,7 +232,7 @@
       <workItem from="1713281480450" duration="2106000" />
       <workItem from="1713366960122" duration="323000" />
       <workItem from="1713368782587" duration="955000" />
-      <workItem from="1713400339523" duration="317000" />
+      <workItem from="1713400339523" duration="4170000" />
     </task>
     <task id="LOCAL-00001" summary="init proj">
       <option name="closed" value="true" />
@@ -485,7 +482,95 @@
       <option name="project" value="LOCAL" />
       <updated>1713400565942</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Merge remote-tracking branch 'github/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.WebCoding/.idea/workspace.xml&#10;#&#9;Dockerfile">
+      <option name="closed" value="true" />
+      <created>1713400814973</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1713400814973</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Merge remote-tracking branch 'github/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.WebCoding/.idea/workspace.xml&#10;#&#9;Dockerfile">
+      <option name="closed" value="true" />
+      <created>1713400959387</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1713400959387</updated>
+    </task>
+    <task id="LOCAL-00034" summary="试一下">
+      <option name="closed" value="true" />
+      <created>1713401088090</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1713401088090</updated>
+    </task>
+    <task id="LOCAL-00035" summary="试一下">
+      <option name="closed" value="true" />
+      <created>1713401332422</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1713401332422</updated>
+    </task>
+    <task id="LOCAL-00036" summary="试一下">
+      <option name="closed" value="true" />
+      <created>1713401952413</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1713401952413</updated>
+    </task>
+    <task id="LOCAL-00037" summary="试一下">
+      <option name="closed" value="true" />
+      <created>1713402645009</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1713402645009</updated>
+    </task>
+    <task id="LOCAL-00038" summary="试一下">
+      <option name="closed" value="true" />
+      <created>1713402825442</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1713402825442</updated>
+    </task>
+    <task id="LOCAL-00039" summary="试一下">
+      <option name="closed" value="true" />
+      <created>1713403392020</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1713403392020</updated>
+    </task>
+    <task id="LOCAL-00040" summary="试一下">
+      <option name="closed" value="true" />
+      <created>1713403689471</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1713403689471</updated>
+    </task>
+    <task id="LOCAL-00041" summary="试一下">
+      <option name="closed" value="true" />
+      <created>1713404034189</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1713404034189</updated>
+    </task>
+    <task id="LOCAL-00042" summary="试一下">
+      <option name="closed" value="true" />
+      <created>1713404229673</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1713404229673</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,9 +604,10 @@
     <MESSAGE value="再试试" />
     <MESSAGE value="试试" />
     <MESSAGE value="shishui" />
-    <MESSAGE value="试一下" />
     <MESSAGE value="添加C#" />
     <MESSAGE value="增加curl" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加curl" />
+    <MESSAGE value="Merge remote-tracking branch 'github/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/.idea.WebCoding/.idea/workspace.xml&#10;#&#9;Dockerfile" />
+    <MESSAGE value="试一下" />
+    <option name="LAST_COMMIT_MESSAGE" value="试一下" />
   </component>
 </project>

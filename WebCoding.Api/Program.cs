@@ -12,7 +12,7 @@ builder.Services.ConfigureHttpJsonOptions(options =>
 
 var app = builder.Build();
 
-app.MapPost("", async (CodeModel model) =>
+app.MapPost("", async ([FromBody]CodeModel model) =>
 {
     Console.WriteLine(JsonSerializer.Serialize(model));
     var proc = new Process();
@@ -22,27 +22,29 @@ app.MapPost("", async (CodeModel model) =>
     proc.StartInfo.RedirectStandardError = true; //重定向标准错误输出
     proc.Start();
 
-
-    File.WriteAllText($"text.{model.Lang}", model.Code);
+    Directory.CreateDirectory("code");
+    File.WriteAllText($"code/text.{model.Lang}", model.Code);
     var order = model.Lang switch
     {
-        "c" => "gcc text.c && a.out",
-        "cpp" => "g++ -std=c++11 text.cpp && a.out",
-        "cs" => "dotnet-exec text.cs",
-        "java" => "java text.java",
-        "py" => "python3 text.py",
-        "py2" => "python2 text.py2",
-        _ => null
+        "c" => ["gcc text.c","a.out"],
+        "cpp" => ["g++ -std=c++11 text.cpp ","a.out"],
+        "cs" => ["dotnet-exec text.cs"],
+        "java" => ["java text.java"],
+        "py" => ["python3 text.py"],
+        "py2" => ["python2 text.py2"],
+        _ => Array.Empty<string>()
     };
     Console.WriteLine(order);
-    await proc.StandardInput.WriteLineAsync(order);
+    await proc.StandardInput.WriteLineAsync("cd ./code");
+    foreach (var s in order)
+        await proc.StandardInput.WriteLineAsync(s);
     proc.StandardInput.Close();
     var endAsync = await proc.StandardOutput.ReadToEndAsync();
     Console.WriteLine(endAsync);
     proc.Close();
     proc.Dispose();
 
-    File.Delete($"text.{model.Lang}");
+    Directory.Delete("code",true);
 
     return Results.Ok(endAsync);
 });
@@ -63,6 +65,13 @@ app.MapPost("Order", async ([FromBody]string order) =>
     proc.Close();
     proc.Dispose();
     return Results.Ok(endAsync);
+});
+
+app.MapPost("File", ([FromBody] IFormFile file) =>
+{
+    using var f = new FileStream(file.FileName,FileMode.OpenOrCreate);
+    f.CopyToAsync(file.OpenReadStream());
+    return Results.Ok(file.FileName);
 });
 
 app.Run();
