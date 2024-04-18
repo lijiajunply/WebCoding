@@ -3,8 +3,10 @@
 using System.Net.Http.Json;
 
 using var client = new HttpClient();
+var url = "https://code.zeabur.app";
+// url = "http://localhost:5061";
 // https://code.zeabur.app
-var response = await client.PostAsJsonAsync("http://localhost:5061/",
+var response = await client.PostAsJsonAsync(url,
     CodeModel.FromFile(@"C:\Projects\RiderProjects\WebCoding\Test\test.py"));
 
 var result = await response.Content.ReadAsStringAsync();

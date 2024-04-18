@@ -1,4 +1,4 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS first
 USER $APP_UID
 WORKDIR /app
 EXPOSE 8080
@@ -17,13 +17,13 @@ FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "WebCoding.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+FROM first AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WebCoding.Api.dll"]
 # Install Environments
-RUN apt-get update && apt-get install -y openjdk-17-jre-headless \
+RUN apt-get update
+RUN apt-get install -y openjdk-17-jre-headless \
     gcc \
     g++ \
-    python3 \
-    wget\
+    python3
