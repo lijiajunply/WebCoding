@@ -7,7 +7,7 @@ var url = "https://code.zeabur.app";
 // url = "http://localhost:5061";
 // https://code.zeabur.app
 var response = await client.PostAsJsonAsync(url,
-    CodeModel.FromFile(@"C:\Projects\RiderProjects\WebCoding\Test\test.py"));
+    CodeModel.FromFile(@"C:\Projects\RiderProjects\WebCoding\Test\test.c"));
 
 var result = await response.Content.ReadAsStringAsync();
 Console.WriteLine(CodeModel.Result(result));

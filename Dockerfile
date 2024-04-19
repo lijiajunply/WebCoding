@@ -22,8 +22,7 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WebCoding.Api.dll"]
 # Install Environments
-RUN apt-get update
-RUN apt-get install -y openjdk-17-jre-headless \
+RUN apt-get update && apt-get install -y openjdk-17-jre-headless \
     gcc \
     g++ \
     python3

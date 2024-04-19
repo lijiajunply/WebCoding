@@ -34,11 +34,9 @@ app.MapPost("", async ([FromBody]CodeModel model) =>
         "py2" => ["python2 text.py2"],
         _ => Array.Empty<string>()
     };
-    Console.WriteLine(order);
     await proc.StandardInput.WriteLineAsync("cd ./code");
     foreach (var s in order)
         await proc.StandardInput.WriteLineAsync(s);
-    
     proc.StandardInput.Close();
     var endAsync = await proc.StandardOutput.ReadToEndAsync();
     Console.WriteLine(endAsync);
