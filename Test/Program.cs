@@ -6,9 +6,9 @@ using var client = new HttpClient();
 var url = "https://code.zeabur.app";
 // url = "http://localhost:5061";
 // https://code.zeabur.app
-var response = await client.PostAsJsonAsync(url,
-    CodeModel.FromFile(@"C:\Projects\RiderProjects\WebCoding\Test\test.c"));
-
+var response =
+    await client.PostAsJsonAsync(url, new CodeModel() { Code = "Console.WriteLine(\"Hello World!\");", Lang = "cs" });
+// CodeModel.FromFile(@"C:\Projects\RiderProjects\WebCoding\Test\Program.cs")
 var result = await response.Content.ReadAsStringAsync();
 Console.WriteLine(CodeModel.Result(result));
 

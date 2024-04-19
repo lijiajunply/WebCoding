@@ -25,4 +25,6 @@ ENTRYPOINT ["dotnet", "WebCoding.Api.dll"]
 RUN apt-get update && apt-get install -y openjdk-17-jre-headless \
     gcc \
     g++ \
-    python3
+    python3 \
+    wget \
+    && rm -rf /var/lib/apt/lists/*
