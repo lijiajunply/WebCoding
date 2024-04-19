@@ -26,8 +26,8 @@ app.MapPost("", async ([FromBody]CodeModel model) =>
     File.WriteAllText($"code/text.{model.Lang}", model.Code);
     var order = model.Lang switch
     {
-        "c" => ["gcc text.c","a.out"],
-        "cpp" => ["g++ -std=c++11 text.cpp ","a.out"],
+        "c" => ["gcc text.c","./a.out"],
+        "cpp" => ["g++ -std=c++11 text.cpp ","./a.out"],
         "cs" => ["dotnet-exec text.cs"],
         "java" => ["java text.java"],
         "py" => ["python3 text.py"],

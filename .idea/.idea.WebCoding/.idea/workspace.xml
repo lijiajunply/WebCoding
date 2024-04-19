@@ -10,8 +10,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebCoding.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebCoding.Api/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -238,14 +236,8 @@
       <workItem from="1713457581816" duration="154000" />
       <workItem from="1713495207890" duration="1634000" />
       <workItem from="1713501240160" duration="674000" />
-    </task>
-    <task id="LOCAL-00002" summary="添加docker">
-      <option name="closed" value="true" />
-      <created>1713200817194</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1713200817195</updated>
+      <workItem from="1713508736676" duration="324000" />
+      <workItem from="1713544288313" duration="73000" />
     </task>
     <task id="LOCAL-00003" summary="Aot 关闭">
       <option name="closed" value="true" />
@@ -631,7 +623,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713455984947</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="123">
+      <option name="closed" value="true" />
+      <created>1713508840805</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1713508840805</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -672,6 +672,7 @@
     <MESSAGE value="添加Python 2" />
     <MESSAGE value="删除一部分" />
     <MESSAGE value="Merge remote-tracking branch 'github/master'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'github/master'" />
+    <MESSAGE value="123" />
+    <option name="LAST_COMMIT_MESSAGE" value="123" />
   </component>
 </project>
