@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using System.Net.Http.Json;
+﻿using System.Net.Http.Json;
 
 using var client = new HttpClient();
 var url = "https://code.zeabur.app";
@@ -11,11 +9,6 @@ var response =
 // CodeModel.FromFile(@"C:\Projects\RiderProjects\WebCoding\Test\Program.cs")
 var result = await response.Content.ReadAsStringAsync();
 Console.WriteLine(CodeModel.Result(result));
-
-// response = await  client.PostAsJsonAsync("https://code.zeabur.app/Order", "cd ./code && ls");
-// result = await response.Content.ReadAsStringAsync();
-//
-// Console.WriteLine(CodeModel.Result(result));
 
 [Serializable]
 internal record CodeModel

@@ -8,7 +8,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="添加C#环境" />
+    <list default="true" id="1d660e87-9bbd-4122-a0c2-4fea309bbfe7" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Test/AI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebCoding/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Program.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +60,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;.NET static 方法.Test.AI.Test.executor&quot;: &quot;Debug&quot;,
     &quot;.NET 启动设置配置文件.WebCoding.Api: http.executor&quot;: &quot;Run&quot;,
     &quot;.NET 项目.Test.executor&quot;: &quot;Run&quot;,
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
@@ -97,6 +102,22 @@
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
       <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Test.AI.Test" type="DotNetStaticMethod" factoryName=".NET Static Method" temporary="true">
+      <option name="EXE_PATH" value="C:\Users\李嘉俊\AppData\Local\Programs\Rider\lib\ReSharperHost\JetLauncherILc.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Test/Test.csproj" />
+      <option name="PROJECT_TFM" value="net8.0" />
+      <option name="CLASS_NAME" value="Test.AI" />
+      <option name="METHOD_NAME" value="Test" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -196,6 +217,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue=".NET static 方法.Test.AI.Test" />
       <item itemvalue=".NET 启动设置配置文件.WebCoding.Api: http" />
       <item itemvalue=".NET 项目.Test" />
       <item itemvalue="Docker.WebCoding.Api/Dockerfile (1)" />
@@ -205,6 +227,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue=".NET static 方法.Test.AI.Test" />
         <item itemvalue="Docker.webcoding" />
       </list>
     </recent_temporary>
@@ -235,15 +258,17 @@
       <workItem from="1713501240160" duration="674000" />
       <workItem from="1713508736676" duration="324000" />
       <workItem from="1713544288313" duration="73000" />
-      <workItem from="1713544412824" duration="1825000" />
-    </task>
-    <task id="LOCAL-00008" summary="再试试">
-      <option name="closed" value="true" />
-      <created>1713248942607</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1713248942607</updated>
+      <workItem from="1713544412824" duration="2263000" />
+      <workItem from="1713593893433" duration="1022000" />
+      <workItem from="1713608019842" duration="1353000" />
+      <workItem from="1713616243916" duration="395000" />
+      <workItem from="1713629786202" duration="1779000" />
+      <workItem from="1713678675379" duration="778000" />
+      <workItem from="1713688286948" duration="2000" />
+      <workItem from="1713778838170" duration="2798000" />
+      <workItem from="1713854438778" duration="1661000" />
+      <workItem from="1713973791913" duration="494000" />
+      <workItem from="1713974588682" duration="598000" />
     </task>
     <task id="LOCAL-00009" summary="试一下">
       <option name="closed" value="true" />
@@ -629,7 +654,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713546093596</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="添加C#环境">
+      <option name="closed" value="true" />
+      <created>1713546624143</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1713546624143</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
